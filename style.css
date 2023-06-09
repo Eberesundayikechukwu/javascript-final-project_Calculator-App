@@ -1,0 +1,131 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  
+}
+:root{  
+  --gradient:linear-gradient(45deg,#845db1,
+  #d65db1,
+  #ff9671,
+  #ff9671,
+  #ffc75f,
+  #f9f871);
+  --gradients:linear-gradient(45deg,#845db1,
+  #6b0c4d,
+  #df987e,
+  #ff9671,
+  #ffc75f,
+  #f9f871);
+  --size:500% 
+  
+}
+
+
+
+#general-container{
+ background-image: var(--gradient);
+ height: 100vh;
+ background-size: var(--size);
+ background-position: left;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ animation: bg-animateion 5s infinite alternate;
+}
+
+@keyframes bg-animateion{
+  0%{background-position: left;}
+  100%{background-position:right;}
+}
+ 
+.first-container{
+  background-color: #170c1b;
+  height: 80vh;
+  width: 50%; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(103, 85, 85);
+}
+
+.first-container h1{
+  background-image: var(--gradients);
+  text-align: center;
+  background-position: right;
+  background-size: var(--size);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;  
+  margin-top: 50px;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  animation: text-animate 4s infinite alternate;  
+  
+  }
+@keyframes text-animate {
+  0%{background-position: right;}
+  100%{background-position: left;}
+}
+
+
+
+
+#question-container {
+  margin-bottom: 20px;
+  color: #ffff;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+   padding: 15px 20px;
+  margin-top: 10px; 
+  width: 50%; 
+  
+}
+
+#score-container {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+button {
+  
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media screen and (max-width: 844px) { 
+  .first-container h1{
+    font-size: 2.5rem;
+  }
+
+  .first-container{
+    width: 90%;
+  }
+  
+}
+@media screen and (max-width: 393px) {
+  
+  
+  
+}
